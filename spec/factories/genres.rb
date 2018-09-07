@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :genre do
-    type ""
+    name "Rock"
     user
   end
 end
