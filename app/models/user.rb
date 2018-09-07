@@ -2,6 +2,7 @@ class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
 
   has_many :campaigns
+  has_many :genres
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
