@@ -12,7 +12,10 @@
         .mui-textfield.mui-textfield--float-label
           = form.text_field :location
           = form.label :location
-        .form-group   
+        .mui-textfield.mui-textfield--float-label
+          = form.number_field :ticket
+          = form.label :ticket, 'Fixed ticket price'
+        .form-group     
           = form.label :image
           = form.file_field :image 
         .form-group
