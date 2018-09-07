@@ -43,25 +43,15 @@ ActiveRecord::Schema.define(version: 2018_09_07_141524) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.bigint "tickets_id"
-    t.index ["tickets_id"], name: "index_campaigns_on_tickets_id"
     t.index ["user_id"], name: "index_campaigns_on_user_id"
   end
 
   create_table "genres", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_genres_on_user_id"
-  end
-
-  create_table "tickets", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "price"
-    t.bigint "campaign_id"
-    t.index ["campaign_id"], name: "index_tickets_on_campaign_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,8 +69,6 @@ ActiveRecord::Schema.define(version: 2018_09_07_141524) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "campaigns", "tickets", column: "tickets_id"
   add_foreign_key "campaigns", "users"
   add_foreign_key "genres", "users"
-  add_foreign_key "tickets", "campaigns"
 end
