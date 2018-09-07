@@ -17,7 +17,7 @@ Feature: Artist has genres
         And I fill in 'Title' with 'Clare Cunningham'
         And I fill in 'Description' with 'Dubbed as having a vocal register similar to Adele'
         And I fill in 'Location' with 'Stockholm'
-        And I choose genre form the 'Genre' field
+        And I choose genre from the 'Genre' field
         And I click on 'Launch Campaign'
         When I wait 1 second
         Then I should be on 'Clare Cunningham' campaign page
