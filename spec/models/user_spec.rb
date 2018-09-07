@@ -39,6 +39,10 @@ RSpec.describe User, type: :model do
     end
   end
 
+    describe 'Genres' do 
+      it { is_expected.to belong_to :users}
+    end
+
   describe 'OAuth methods - Facebook and Google' do
     let(:facebook_auth_response) { OmniAuth::AuthHash.new(OmniAuthFixtures.facebook_mock) }
     let(:google_auth_response) { OmniAuth::AuthHash.new(OmniAuthFixtures.google_oauth2_response) }
