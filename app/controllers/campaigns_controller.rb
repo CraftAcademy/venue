@@ -44,6 +44,11 @@ class CampaignsController < ApplicationController
    end
   end
 
+  def destroy
+    @campaign = Campaign.find(params[:id])
+    @campaign.destroy
+    redirect_to campaigns_path, notice: 'Campaign deleted'
+  end
 
 private
 

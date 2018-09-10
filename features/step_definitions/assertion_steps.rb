@@ -15,6 +15,11 @@ Then("there should be a Campaign titled {string} in the Database") do |expected_
     expect(campaign).not_to eq nil
 end
 
+Then("there should NOT be a Campaign titled {string} in the Database") do |campaign_title|
+    campaign = Campaign.find_by(title: campaign_title)
+    expect(campaign).to eq nil
+end
+
 Then("I should be redirected to the {string} page") do |page_name|
     expect(current_path).to eq page_path(page_name)    
 end

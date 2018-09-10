@@ -19,4 +19,4 @@
         = link_to 'Accept', campaign_path(@campaign, event: 'accept'), method: :put, class: 'form-submit'
 - if user_signed_in? && current_user.admin?
     .form-group
-        = link_to 'Delete Campaign',
+        = link_to 'Delete Campaign', campaign_path(@campaign), method: :delete, data: { confirm: 'Are you sure?' }, class: 'form-submit'
