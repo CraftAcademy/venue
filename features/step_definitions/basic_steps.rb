@@ -32,3 +32,7 @@ And('I fill in ticket fields') do
     And I fill in 'Ticket name' with 'Sure thing'
   )
 end
+
+And ("I click on {string} in the confirmation popup") do |string|
+  page.driver.browser.switch_to.alert.accept
+end
