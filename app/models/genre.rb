@@ -1,0 +1,4 @@
+class Genre < ApplicationRecord
+    validates_presence_of :name
+    belongs_to :performer
+end
