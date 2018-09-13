@@ -46,6 +46,14 @@
             .mui-textfield.mui-textfield--float-label   
               = form.text_field :spotify 
               = form.label :spotify 
+        .field#profile_image
+          = form.label :profile_image
+          = form.file_field :profile_image
+        .field#background_image
+          = form.label :background_image
+          = form.file_field :background_image    
         .form-group
           = form.submit 'Create Profile', class: 'form-submit'
           = button_tag 'Cancel', class: 'form-submit', onclick: 'cancelModal(event);' 
+
+

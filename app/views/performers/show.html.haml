@@ -1,15 +1,15 @@
 #content
-  #artist-banner{style: "background-image: url(#{image_path('feat-card-1.jpg')}"}
+  #artist-banner{style: "background-image: url(#{rails_blob_path(@performer.background_image) unless @performer.background_image.attachment.nil?}"}
     .mui-container
       .mui-row
         .mui-col-md-12
-          .artist-picture{style: "background-image: url(#{image_path('feat-card-1.jpg')}"}
+          .artist-picture{style: "background-image: url(#{rails_blob_path(@performer.profile_image) unless @performer.profile_image.attachment.nil? }"}
           %h1= @performer.name
           .location Stockholm | Sweden
           .genre Rock
           .follow-request
             %a{href: "#"}> + Follow
-              | 
+              |
             %a{href: "#"} + Request this artist
   #artist-details
     .mui-container
@@ -24,8 +24,9 @@
                   %li
                     - if user_signed_in? && current_user.admin?
                       = link_to 'Edit', edit_performer_path(@performer), remote: true, class: 'form-submit'
-                    - if @performer.active? && current_user.admin?
-                      = link_to 'Archive', performer_path(@performer, event: 'archive'), method: :put, data: { confirm: 'Are you sure?' }, class: 'form-submit'
+                    - if user_signed_in? && current_user.admin? 
+                      - if @performer.active?
+                        = link_to 'Archive', performer_path(@performer, event: 'archive'), method: :put, data: { confirm: 'Are you sure?' }, class: 'form-submit'
       .mui-row.details-spotify
         .mui-col-md-12.mui-col-lg-8
           %h2= @performer.name

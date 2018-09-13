@@ -22,6 +22,7 @@ gem 'state_machines-activerecord'
 gem 'social-share-button'
 gem 'stripe-rails'
 gem 'acts_as_shopping_cart', '~> 0.4.1'
+gem 'aws-sdk-s3', '~> 1.0.0.rc2'
 
 group :development, :test do
   gem 'chromedriver-helper'

@@ -59,7 +59,9 @@ class PerformersController < ApplicationController
             :youtube,
             :website,
             :spotify,
-            :state
+            :state,
+            :profile_image,
+            :background_image
             )
     end
 

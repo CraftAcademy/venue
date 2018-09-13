@@ -51,3 +51,11 @@ Then("I fill in the stripe form") do
     find_field('cvc').send_keys('999')
   end
 end
+
+Then("I should see the background image") do
+  expect(page).to have_css ("#artist-banner")
+end
+
+Then("I should see the profile image") do
+  expect(page).to have_css (".artist-picture")
+end
