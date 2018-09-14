@@ -18,7 +18,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.active_storage.service = :amazon_development
+  config.active_storage.service = :local #:amazon_development
 
   config.action_mailer.raise_delivery_errors = false
 
