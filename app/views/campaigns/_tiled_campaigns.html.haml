@@ -4,7 +4,7 @@
       .tiled-campaigns-wrap
         .tiled-campaigns
           .col.col-1
-            %a.card{:href => "#", :style => "background-image: url('#{rails_blob_url campaigns.second.image}')"}
+            %a.card{:href => campaign_path(campaigns.second), :style => "background-image: url('#{rails_blob_url campaigns.second.image}')"}
               %span.funded
                 %strong &gt; 100%
                 Funded
@@ -31,7 +31,7 @@
                 = campaigns.second.title
           .col.col-2
             - 2.times do
-              %a.card{:href => "#", :style => "background-image: url('#{rails_blob_url campaigns.last.image}')"}
+              %a.card{:href => campaign_path(campaigns.last), :style => "background-image: url('#{rails_blob_url campaigns.last.image}')"}
                 %span.funded
                   %strong &gt; 100%
                   Funded
@@ -58,6 +58,6 @@
                   = campaigns.last.title
           .col.col-3
             - 3.times do
-              %a.card{:href => "#", :style => "background-image: url('#{rails_blob_url campaigns.first.image}')"}
+              %a.card{:href => campaign_path(campaigns.first), :style => "background-image: url('#{rails_blob_url campaigns.first.image}')"}
                 %span.caption
                   = campaigns.first.title
