@@ -1,9 +1,8 @@
-{
-  "name": "venue",
-  "private": true,
-  "dependencies": {
-    "choices.js": "^3.0.4",
-    "izitoast": "^1.4.0",
-    "siema": "^1.5.1"
+{    "name": "venue",
+    "private": true,
+    "dependencies": {
+      "choices.js": "^3.0.4",
+      "izitoast": "^1.4.0",
+      "siema": "^1.5.1"
+    }
   }
-}
