@@ -37,15 +37,15 @@
             %li
               %a
                 = icon('fab', 'twitter')
-                = link_to "Twitter", @performer.twitter 
+                = link_to "@#{@performer.twitter}".split('https://twitter.com/').join
             %li
               %a
                 = icon('fab', 'facebook')
-                = link_to "Facebook", @performer.facebook
+                = link_to "#{@performer.facebook}".split('https://www.facebook.com/').join.split('/').join
             %li
               %a
                 = icon('fab', 'instagram')
-                = link_to "Instagram", @performer.instagram
+                = link_to "@#{@performer.instagram}".split('https://www.instagram.com/').join.split('/').join, @performer.instagram
           .youtube-container
             %iframe{allow: "autoplay; encrypted-media", allowfullscreen: "", frameborder: "0", height: "315", src: "https://www.youtube.com/embed/#{@performer.youtube}", width: "560"}
         .mui-col-md-12.mui-col-lg-4.spotify-container
