@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "haml-rails", "~> 1.0"
 gem 'devise'
+gem 'omniauth-oauth2', '~> 1.5'
 gem 'omniauth-facebook'
 gem 'pundit'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
@@ -29,6 +30,7 @@ gem 'rqrcode'
 gem 'barby', require: true
 # Temporary in production group untill we set up SendGrid on Heroku
 gem "letter_opener"
+gem 'rspotify', github: 'CraftAcademy/rspotify'
 
 group :development, :test do
   gem 'chromedriver-helper'
